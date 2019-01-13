@@ -26,7 +26,7 @@ module.exports = function(app) {
         });
     });
 
-    // Change devored to be true (after click devored)
+    // Change devoured to be true (after click devour it!)
     app.post("/burger/:id", function(req,res) {
         db.Burger.update({
             devoured: req.body.devoured
