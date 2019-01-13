@@ -30,4 +30,13 @@ $(document).ready(function() {
         })
     });
 
+    // after cancle order
+    $(".del").on("click", function(event) {
+        var id = $(this).data("id");
+        $.post("/burger/cancle/" + id , status 
+        ,function() {
+            console.log("Someone cancle order")
+            location.reload();
+        })
+    });
 });

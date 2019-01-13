@@ -40,7 +40,21 @@ module.exports = function(app) {
             res.end();
         });
     });
+
+    // Cancle order
+    app.post("/burger/cancle/:id", function(req,res) {
+        db.Burger.destroy({
+            where : {
+                id : req.params.id
+            }
+        })
+        .then(function(result) {
+            res.end();
+        });
+    });
 }
+
+
 
 
 
