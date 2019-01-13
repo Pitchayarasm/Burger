@@ -1,0 +1,33 @@
+<img id="pic" src="http://icons-for-free.com/icon/download-hamburger_icon-566678.png" alt="burger">
+<div class="container">
+<h2 id="head">Eat-Da-Burger</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6 box">
+                    <p class="tag">Current Order</p>
+                        {{#each burger}}
+                            {{#unless devoured}}
+                            <p>{{dataValues.id}}. {{burger_name}}
+                            <button class="dev" data-id={{this.id}} >Devour It!</button></p>
+                            {{/unless}}
+                        {{/each}}
+                    </li>
+                </div>
+                <div class="col-md-6 box" id="done">
+                    <p class="tag">Eaten burger</p>
+                    {{#each burger}}
+                        {{#if devoured}}
+                            <p>{{id}}. {{burger_name}}</p>
+                        {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        <div class="form-group input">
+            <textarea class="form-control area" rows="5" id="body"></textarea>
+            <button type="submit" class="btn btn-danger submit btn-sm" id="submitBurger">Submit</button>
+            <p>Enter a burger you want to eat and Click the "Submit" button</p>
+        </div>
+    </div>
+</div>
